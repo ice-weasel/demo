@@ -3,41 +3,46 @@ import React, { useState } from 'react';
 interface Item {
   id: number;
   name: string;
+  category: string;
 }
 
-const FilterSearch: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredItems, setFilteredItems] = useState<Item[]>([]);
+const items: Item[] = [
+  { id: 1, name: 'Complete Checkup', category: 'Category A'},
+  { id: 2, name: 'Software', category: 'Category B' },
+  { id: 3, name: 'Hardware', category: 'Category C' },
+  
+];
 
-  const items: Item[] = [
-    { id: 1, name: 'Item 1' },
-    { id: 2, name: 'Item 2' },
-    { id: 3, name: 'Item 3' },
-    { id: 4, name: 'Another Item' },
-  ];
+const FilterSearch = () => {
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [filteredItems, setFilteredItems] = useState<Item[]>(items);
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
-    setSearchTerm(value);
+    setSelectedCategory(value);
 
-    // Perform the filtering logic based on the search term
-    const filtered = items.filter((item) =>
-      item.name.toLowerCase().includes(value.toLowerCase())
-    );
+    // Perform the filtering logic based on the selected category
+    const filtered = value !== ''
+      ? items.filter((item) => item.category === value)
+      : items;
     setFilteredItems(filtered);
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search items"
-        value={searchTerm}
-        onChange={handleSearch}
-      />
+    <div className ="flex flex-wrap justidy-start p-4">
+      <select
+        value={selectedCategory}
+        onChange={handleCategoryChange}
+        className = "text-slate-50"
+      >
+        <option value="">All Categories</option>
+        <option value="Category A">Complete Checkup</option>
+        <option value="Category B">Software</option>
+        <option value="Category C">Hardware</option>
+      </select>
 
       {filteredItems.length > 0 ? (
-        <ul>
+        <ul className="p-2">
           {filteredItems.map((item) => (
             <li key={item.id}>{item.name}</li>
           ))}
