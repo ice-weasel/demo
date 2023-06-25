@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
             <a href="https://flowbite.com/" className="flex items-center">
              
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                FNT TECH SUPPORT
+                FNT TEKYKNICKALS
               </span>
             </a>
           </div>
