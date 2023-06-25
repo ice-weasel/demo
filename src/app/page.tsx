@@ -24,10 +24,10 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <main>
+    <main >
 
 
-      <div className="flex flex-wrap flex-col justify-between mx-auto" id="start">
+      <div className="flex  flex-wrap flex-col justify-between mx-auto" id="start">
         <div className="bg-white border-gray-200 dark:bg-gray-900">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="https://flowbite.com/" className="flex items-center">
@@ -42,29 +42,18 @@ const Navbar: React.FC = () => {
        
 
         
-      <div className="grid grid-cols-2 md:grid-cols-3 flex flex-wrap justify-between mx-auto gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 bg-hover flex flex-wrap justify-between mx-auto gap-4">
     <div>
-        <img className="h-auto max-w-lg rounded-lg" src=""></img>
+        <img className="h-auto max-w-lg rounded-lg" src="https://www.popsci.com/uploads/2019/03/07/QVFBYX3BK6VWNCXYNLZYEAWLME.jpg" alt=""></img>
     </div>
     
     <div>
-        <img className="h-auto max-w-lg rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt=""></img>
+        <img className="h-auto max-w-lg rounded-lg" src="https://support.content.office.net/en-us/media/c5ecd983-e264-4d81-812a-dfb332265591.png" alt=""></img>
     </div>
     <div>
-        <img className="h-auto max-w-lg rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt=""></img>
+        <img className="h-auto max-w-lg rounded-lg" src="https://www.popsci.com/uploads/2019/03/07/KEHXYBTWBPNURRHZVKUTHYEH5Q.jpg" alt=""></img>
+    </div>   
     </div>
-    <div>
-        <img className="h-auto max-w-lg rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt=""></img>
-    </div>
-    <div>
-        <img className="h-auto max-w-lg rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt=""></img>
-    </div>
-    <div>
-        <img className="h-auto max-w-lg rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt=""></img>
-    </div>
-
-          
-        </div>
 
         
 
